@@ -1,0 +1,57 @@
+﻿<Window x:Class="PrismWPF.Views.AdvancedSearch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"            
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+            Title="{Binding Title}" MinHeight="450" Height="450" MinWidth="300" Width="350" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="0">
+            <Label Content="Фамилия" Width="100" Margin="10 0 0 0" Panel.ZIndex="2"/>
+            <TextBox Width="170" Margin="10 0 0 0" Panel.ZIndex="2" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="1">
+            <Label Content="Имя" Width="100" Margin="10 0 0 0" Panel.ZIndex="2"/>
+            <TextBox Width="170" Margin="10 0 0 0" Panel.ZIndex="2" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="2">
+            <Label Content="Отчество" Width="100" Margin="10 0 0 0" Panel.ZIndex="2"/>
+            <TextBox Width="170" Margin="10 0 0 0" Panel.ZIndex="2" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="3">
+            <Label Content="Дата рождения" Width="100" Margin="10 0 0 0" Panel.ZIndex="2"/>
+            <TextBox Width="170" Margin="10 0 0 0" Panel.ZIndex="2" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="4">
+            <Label Content="Телефон" Width="100" Margin="10 0 0 0" Panel.ZIndex="2"/>
+            <TextBox Width="170" Margin="10 0 0 0" Panel.ZIndex="2" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="5">
+            <Label Content="Е-почта" Width="100" Margin="10 0 0 0" Panel.ZIndex="2"/>
+            <TextBox Width="170" Margin="10 0 0 0" Panel.ZIndex="2" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="6">
+            <Label Content="Отдел" Width="100" Margin="10 0 0 0" Panel.ZIndex="2"/>
+            <ComboBox SelectedValue="{Binding ComboBoxSelectedValue}" x:Name="department" SelectedIndex="0" Width="170" Margin="10 0 0 0" Panel.ZIndex="2"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="7">
+            <Label Content="Должность" Width="100" Margin="10 0 0 0" Panel.ZIndex="2"/>
+            <ComboBox x:Name="position" SelectedIndex="0" Width="170" Margin="10 0 0 0" Panel.ZIndex="2"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="8">
+            <Button Content="Добавить" IsDefault="True" Height="25" Width="70"/>
+            <Button Content="Отмена" IsCancel="True" Height="25" Width="70" Margin="20 0 0 0"/>
+        </StackPanel>
+    </Grid>
+</Window>
